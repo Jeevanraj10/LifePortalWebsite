@@ -9,9 +9,9 @@
   <body>
     <div id="main">
       <!-- top Layout -->
-      <div class="topLayout">
+      <div id="topLayout">
         <span class="naviconSpan">
-          <a href="#dashBoardIcon"><img id="navIcon" title="Show/Hide Navigation" src="Images/Dashboard_Icon.png" alt="dashBoardIcon"></a>
+          <a href="#dashBoardIcon"><img id="navIcon" onclick="Sidebar()" title="Show/Hide Navigation" src="Images/Dashboard_Icon.png" alt="dashBoardIcon"></a>
 
           <!-- Side Bar -->
           <div id="sidebar">
@@ -70,7 +70,6 @@
             <hr>
           </div>
           <!-- Side Bar Ends -->
-
         </span>
         <span>
           <a target="_blank" href="https://life.ltts.com/LnT/my/"><img id="LNTLogo" src="Images/logo.png" alt="l&tLogo"></a>
@@ -85,7 +84,7 @@
         </span>
         <!-- dropdown menu -->
         <span class="dropdownSpan">
-          <a href="#dropdown">Jeevan SR</a>
+          <a href="#dropdown" onclick="dropDown()">Jeevan SR</a>
           <div id="dropdownmenu">
             <ul>
               <li>
@@ -108,18 +107,21 @@
       <!-- top Layout ends -->
 
       <!-- Main Body -->
-      <div class="container-1">
+      <div id="container-1" onclick="Close()">
         <a id="text-dashboard" href="#Dashboard">Dashboard</a>
         <p id="announ">
           <b>Announcement</b>
         </p>
-        <!-- <div class="textSrolling"> <p>Please write to support.lms@lnttechservices.com for any queries/issues in LIFE portal </p> </div> -->
+        <div class="textSrolling">
+          <p>Please write to support.lms@lnttechservices.com for any queries/issues in LIFE portal
+          </p>
+        </div>
         <h4 id="text">Jeevan S R
         </h4>
         <div id="tabs">
           <ul>
             <li>
-              <a class="active" href="#myTraining">
+              <a onclick="myTrainingFunction()" class="active" href="#myTraining">
                 <span>
                   <img class="dashboard-icon" src="Images/my-training.png"></img>
                   <img class="dashboard-icon1" src="Images/my-training1.png"></img>
@@ -127,56 +129,56 @@
               </a>
             </li>
             <li>
-              <a href="#requestedTraining">
+              <a onclick="requestedTrainingFunction()" href="#requestedTraining">
                 <span>
                   <img class="dashboard-icon" src="Images/requested-training.png"></img>
                   <img class="dashboard-icon1" src="Images/requested-training1.png"></img>
                 </span>Requested Trainings</a>
             </li>
             <li>
-              <a href="#trainingCatalog">
+              <a onclick="trainingCatalogFunction()" href="#trainingCatalog">
                 <span>
                   <img class="dashboard-icon" src="Images/training-catalog.png"></img>
                   <img class="dashboard-icon1" src="Images/training-catalog1.png"></img>
                 </span>Training Catalogue</a>
             </li>
             <li>
-              <a href="#myLearningPlans">
+              <a onclick="myLearningPlansFunction()" href="#myLearningPlans">
                 <span>
                   <img class="dashboard-icon" src="Images/learningplan.png"></img>
                   <img class="dashboard-icon1" src="Images/learningplan1.png"></img>
                 </span>My Learning Plans</a>
             </li>
             <li>
-              <a href="#atl">
+              <a onclick="atlFunction()" href="#atl">
                 <span>
                   <img class="dashboard-icon" src="Images/training-catalog.png"></img>
                   <img class="dashboard-icon1" src="Images/training-catalog1.png"></img>
                 </span>ATL</a>
             </li>
             <li>
-              <a href="#idp">
+              <a onclick="idpFunction()" href="#idp">
                 <span>
                   <img class="dashboard-icon" src="Images/IDPN.png"></img>
                   <img class="dashboard-icon1" src="Images/IDPN_hover.png"></img>
                 </span>IDP</a>
             </li>
             <li>
-              <a href="#myCompletions">
+              <a onclick="myCompletionsFunction()" href="#myCompletions">
                 <span>
                   <img class="dashboard-icon" src="Images/learningplan.png"></img>
                   <img class="dashboard-icon1" src="Images/learningplan1.png"></img>
                 </span>My Completions</a>
             </li>
             <li>
-              <a href="#onlineTests">
+              <a onclick="onlineTestsFunction()" href="#onlineTests">
                 <span>
                   <img class="dashboard-icon" src="Images/learningplan.png"></img>
                   <img class="dashboard-icon1" src="Images/learningplan1.png"></img>
                 </span>My Online Tests</a>
             </li>
             <li>
-              <a href="#moocCourses">
+              <a onclick="moocCoursesFunction()" href="#moocCourses">
                 <span>
                   <img class="dashboard-icon" src="Images/training-catalog.png"></img>
                   <img class="dashboard-icon1" src="Images/training-catalog1.png"></img>
@@ -184,9 +186,40 @@
             </li>
           </ul>
         </div>
+        <!-- divisions for TABS starts here -->
+        <div class="tabsContainerDivision">
+          <div id="myTrainingDivision">
+            <p>I am My Training</p>
+          </div>
+
+          <div id="requestedTrainingDivision">
+            <p>I am Requested Training</p>
+          </div>
+
+          <div id="trainingCatalogDivision">
+            <p>I am Training Catalogue</p>
+          </div>
+          <div id="myLearningPlansDivision">
+            <p>I am My Learning</p>
+          </div>
+          <div id="atlDivision">
+            <p>I am My ATL</p>
+          </div>
+          <div id="idpDivision">
+            <p>I am My IDP</p>
+          </div>
+          <div id="myCompletionsDivision">
+            <p>I am My Completions</p>
+          </div>
+          <div id="myOnlineTestsDivision">
+            <p>I am Online Tests</p>
+          </div>
+          <div id="moocCoursesDivision">
+            <p>I am Mooc Courses</p>
+          </div>
+        </div>
       </div>
       <!-- Main Body Ends -->
-
     </div>
     <script src="DashBoardFunc.js"></script>
   </body>
