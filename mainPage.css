@@ -220,7 +220,7 @@ hr {
   padding: 0;
   overflow: hidden;
   background-color: white;
-  border-bottom: 2px solid #007CC8;
+  border-bottom: 3px solid #007CC8;
 }
 #tabs li {
   float: left;
@@ -245,10 +245,51 @@ hr {
   background-color: #007CC8;
 }
 .tabsContainerDivision{
-  background: white;
+  height: 350px;
   margin-left:25px;
   margin-right:25px;
+  padding: 20px 20px;
+  background: white;
 }
 .tabsContainerDivision div{
   display: none;
+}
+#myTrainingDivision{
+  border-right: 1px solid #d8d6d6;
+  border-left: 1px solid #d8d6d6;
+}
+#myTrainingDivisionTable th{
+  padding: 8px;
+  height: 60px;
+  text-align: left;
+  color:white;
+  background-color: #4E565C;
+}
+#myTrainingDivisionTable tr{
+  height: 60px;
+}
+#myTrainingDivisionTable td{
+  font-family: monospace;
+  color: rgba(51, 51, 51);
+  font-size: 15.4px;
+  border-bottom: 1px solid #d8d6d6;
+  padding: 8px;
+}
+#myTrainingDivisionTable td a{
+  text-decoration: none;
+  color: #0070a8;
+}
+#viewmore{
+  display: block;
+  background: #00559E;
+  color: white;
+  text-decoration: none;
+  float: right;
+  padding: 5px 5px;
+  margin-top: 40px;
+}
+#viewmore:hover{
+  background: white;
+  color:#0070a8;
+  border: 1px solid #0070a8;
 }

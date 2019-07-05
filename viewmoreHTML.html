@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Workflow</title>
+    <link rel="stylesheet" href="mainPage.css">
+    <link rel="stylesheet" href="viewmore.css">
+  </head>
+  <body>
+    <div id="main">
+      <div id="topLayout">
+        <span class="naviconSpan">
+          <a href="#dashBoardIcon"><img id="navIcon" onclick="Sidebar()" title="Show/Hide Navigation" src="Images/Dashboard_Icon.png" alt="dashBoardIcon"></a>
+
+          <!-- Side Bar -->
+          <div id="sidebar">
+            <ul>
+              <li>
+                <h3>
+                  <strong>Quick Links</strong>
+                </h3>
+              </li>
+              <li>
+                <a href="#course_requests">
+                  <span>
+                    <img src="Images/manage_trainers.png"></img>
+                  </span>course requests</a>
+              </li>
+              <li>
+                <a href="#My_Trainings">
+                  <span>
+                    <img src="Images/Manage_learningheads.png"></img>
+                  </span>My Trainings</a>
+              </li>
+              <li>
+                <a href="#My_Calender">
+                  <span>
+                    <img src="Images/Manage_business_head.png"></img>
+                  </span>My Calender</a>
+              </li>
+              <li>
+                <a href="#e-Library">
+                  <span>
+                    <img src="Images/skill-repository.png"></img>
+                  </span>e-Library</a>
+              </li>
+              <li>
+                <a href="#Site_blogs">
+                  <span>
+                    <img src="Images/training-request.png"></img>
+                  </span>Site blogs</a>
+              </li>
+              <li>
+                <a href="#Discussion_Board">
+                  <span>
+                    <img src="Images/learning-paln.png"></img>
+                  </span>Discussion Board</a>
+              </li>
+              <li>
+                <a href="#ATL_Courses">
+                  <span>
+                    <img src="Images/learning-paln.png"></img>
+                  </span>ATL Courses</a>
+              </li>
+            </ul>
+            <hr>
+            <h3>Reports</h3>
+            <a id="manageReports" href="#manageReports">Manage reports</a>
+            <hr>
+          </div>
+          <!-- Side Bar Ends -->
+        </span>
+        <span>
+          <a target="_blank" href="https://life.ltts.com/LnT/my/"><img id="LNTLogo" src="Images/logo.png" alt="l&tLogo"></a>
+        </span>
+        <span>
+          <img src="Images/lifePortal.png" id="lifePortalImage" alt="lifeportalImage">
+        </span>
+        <span>
+          <a href="#userImage">
+            <img src="Images/userImage.png" id="userImage" alt="userImage"></img>
+          </a>
+        </span>
+        <!-- dropdown menu -->
+        <span class="dropdownSpan">
+          <a href="#dropdown" onclick="dropDown()">Jeevan SR</a>
+          <div id="dropdownmenu">
+            <ul>
+              <li>
+                <a href="#logout">Logout</a>
+              </li>
+              <li>
+                <a href="#help">Help</a>
+              </li>
+              <li>
+                <a href="#viewprofile">View profile</a>
+              </li>
+              <li>
+                <a href="#editprofile">Edit profile</a>
+              </li>
+            </ul>
+          </div>
+        </span>
+        <!-- dropdown menu ends -->
+      </div>
+      <div class="cont-1">
+        <h4>My Trainings</h4>
+      </div>
+      <div class="cont-2">
+        <label id="label-1">Show
+          <select>
+            <option value="10">10</option>
+            <option value="25">25</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+          </select>entries
+          <input type="text">
+          <p id="search">Search: &nbsp;</p>
+        </label>
+        <div id="myTraining">
+          <table id="myTrainingTable" cellspacing="0" cellpadding="0">
+            <th>Training</th>
+            <th>Proficiency Level</th>
+            <th>Skill</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Catagory</th>
+            <th>Type</th>
+            <th>Status</th>
+            <th>View</th>
+            <tr>
+              <td>QMS Induction (Mechanical) – Practitioner</td>
+              <td>Practitioner</td>
+              <td>Project Management Processes</td>
+              <td>-</td>
+              <td>-</td>
+              <td>Process/Methodology</td>
+              <td>Certification Course</td>
+              <td>-</td>
+              <td>
+                <a href="#">Launch</a>
+              </td>
+            </tr>
+            <tr>
+              <td>QMS Induction (Embedded) – Practitioner</td>
+              <td>Practitioner</td>
+              <td>Project Management Processes</td>
+              <td>-</td>
+              <td>-</td>
+              <td>Process/Methodology</td>
+              <td>Certification Course</td>
+              <td>-</td>
+              <td>
+                <a href="#">Launch</a>
+              </td>
+            </tr>
+            <tr>
+              <td>Information Security Management System</td>
+              <td>Awareness</td>
+              <td>Information Security Management</td>
+              <td>-</td>
+              <td>-</td>
+              <td>Process/Methodology</td>
+              <td>Certification Course</td>
+              <td>-</td>
+              <td>
+                <a href="#">Launch</a>
+              </td>
+            </tr>
+            <tr>
+              <td>Python Training</td>
+              <td>Practitioner</td>
+              <td>Python</td>
+              <td>14/08/2017</td>
+              <td>24/08/2017</td>
+              <td></td>
+              <td>Course</td>
+              <td>Ongoing</td>
+              <td>
+                <a href="#">View
+                </a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <p id="bottomText">Showing 1 to 4 of 4 entries
+        </p>
+      </div>
+      <div class="cont-3">
+        <a href="#contactus">CONTACT US</a>
+      </div>
+    </div>
+    <script src="mainPage.js"></script>
+  </body>
+</html>
