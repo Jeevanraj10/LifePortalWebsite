@@ -1,13 +1,26 @@
 function Sidebar() {
-  document.getElementById("sidebar").style.display = "block";
+  var x = document.getElementById("sidebar");
+  if (x.style.display == 'none' || x.style.display == '') {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
 }
 function dropDown() {
-  document.getElementById("dropdownmenu").style.display = "block";
+  // document.getElementById("dropdownmenu").style.display = "block";
+  var x = document.getElementById("dropdownmenu");
+  if (x.style.display == 'none' || x.style.display == '') {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
 }
 function Close(){
-  document.getElementById("dropdownmenu").style.display = "none";
   document.getElementById("sidebar").style.display = "none";
+  document.getElementById("dropdownmenu").style.display = "none";
 }
+
+// tabs container functionality.
 var divs = ["myTrainingDivision", "requestedTrainingDivision", "trainingCatalogDivision",
 "myLearningPlansDivision","atlDivision","idpDivision",
 "myCompletionsDivision","myOnlineTestsDivision","moocCoursesDivision"];
@@ -33,4 +46,7 @@ function hideNonVisibleDivs() {
       div.style.display = "none";
     }
   }
+}
+function dialogueBox() {
+  document.getElementById('myDialog').showModal();
 }

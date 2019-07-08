@@ -279,6 +279,112 @@ hr {
   text-decoration: none;
   color: #0070a8;
 }
+#requestedTrainingDivision, #myOnlineTestsDivision p{
+  background-color: #d9edf7;
+  padding: 12px;
+  text-align: center;
+  border-radius: 8px;
+  overflow: hidden;
+  color: #3a87ad;
+  font-size: 13px;
+  font-family: 'Source Sans Pro',sans-serif;
+}
+#trainingCatalogDivision select{
+  margin-left: 450px;
+  width: 250px;
+  padding: 6px;
+  border-radius: 5px;
+  color: #444;
+}
+#myLearningPlansDivision h5{
+  color: #999;
+  font-family: 'Source Sans Pro',sans-serif;
+
+}
+#myLearningPlansDivision p{
+  background-color: #d9edf7;
+  padding: 12px;
+  border-radius: 8px;
+  overflow: hidden;
+  color: #3a87ad;
+  font-size: 15px;
+  font-family: 'Source Sans Pro',sans-serif;
+}
+#atlDivision ol{
+  margin-left: 15px;
+  color: #333;
+  font-family: 'Source Sans Pro',sans-serif;
+  font-size: 15.4px;
+}
+#atlDivision p{
+  color: #333;
+  font-family: 'Source Sans Pro',sans-serif;
+  font-size: 15.4px;
+}
+#idpDivision select{
+  width: 100px;
+  padding: 5px;
+  border-radius: 5px;
+  color: #444;
+}
+#idpDivision #idpDivisionLabel-1{
+  margin-left: 50px;
+  float: left;
+  clear: left;
+}
+#idpDivision #idpDivisionLabel-2{
+  margin-left: 450px;
+}
+#idpDivision #createNew{
+  color: white;
+  padding: 6px;
+  text-decoration: none;
+  background: #0058A7;
+  float: right;
+  margin-right: 5px;
+}
+#idpDivision #idpSession{
+  color: white;
+  padding: 6px 26px;
+  text-decoration: none;
+  background: #0058A7;
+  float: left;
+  clear: left;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+#idpDivision #records{
+  float: left;
+  clear: left;
+  margin-top: 10px;
+  background-color: #d9edf7;
+  width: 98%;
+  padding: 12px;
+  text-align: center;
+  border-radius: 8px;
+  color: #3a87ad;
+  font-size: 13px;
+  font-family: 'Source Sans Pro',sans-serif;
+}
+#myCompletionsDivision{
+  width: 100%;
+  border-right: 1px solid #d8d6d6;
+  border-left: 1px solid #d8d6d6;
+}
+#myCompletionDivisionTable th{
+  width: 200px;
+  text-align: left;
+  color:white;
+  background-color: #4E565C;
+  padding: 8px;
+}
+#myCompletionDivisionTable td{
+  font-family: monospace;
+  color: rgba(51, 51, 51);
+  font-size: 15.4px;
+  border-bottom: 1px solid #d8d6d6;
+  padding: 8px;
+}
 #viewmore{
   display: block;
   background: #00559E;
