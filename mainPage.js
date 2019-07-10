@@ -19,6 +19,16 @@ function Close(){
   document.getElementById("sidebar").style.display = "none";
   document.getElementById("dropdownmenu").style.display = "none";
 }
+function createNewActionPlan() {
+  document.getElementById("mainModal").style.display = "block";
+  var form = document.getElementsByClassName('modal-content');
+  for(var i = 0; i < form.length; i++) {
+    form[i].style.display='block'
+}
+}
+function closeForm() {
+  document.getElementById("mainModal").style.display = "none";
+}
 
 // tabs container functionality.
 var divs = ["myTrainingDivision", "requestedTrainingDivision", "trainingCatalogDivision",
@@ -46,7 +56,4 @@ function hideNonVisibleDivs() {
       div.style.display = "none";
     }
   }
-}
-function dialogueBox() {
-  document.getElementById('myDialog').showModal();
 }

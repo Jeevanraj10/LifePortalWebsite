@@ -4,7 +4,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>LIFE PORTAL</title>
     <link rel="stylesheet" href="mainPage.css">
-
   </head>
   <body>
     <div id="main">
@@ -12,7 +11,6 @@
       <div id="topLayout">
         <span class="naviconSpan">
           <a href="#dashBoardIcon"><img id="navIcon" onclick="Sidebar()" title="Show/Hide Navigation" src="Images/Dashboard_Icon.png" alt="dashBoardIcon"></a>
-
           <!-- Side Bar -->
           <div id="sidebar">
             <ul>
@@ -302,7 +300,31 @@
               </label>
             </span>
             <span>
-              <a id="createNew" href="#newAction">Create New Action Plan</a>
+              <a id="createNew" href="#newAction" onclick="createNewActionPlan()">Create New Action Plan</a>
+              <div id="mainModal" class="animate">
+                <div class="modal-content">
+                  <span>
+                    <p id="text1">
+                      <b>New Action Plan</b>
+                      <a href="#" onclick="closeForm()">&times</a>
+                    </p>
+                  </span>
+                  <span>
+                    <p id="text2"><img src="Images/req.gif">Select either Behavioral or Technical.</p>
+                  </span>
+                  <span>
+                    <label style="margin-left:10px;">Category
+                      <select>
+                        <option value="Behavioral">Behavioral</option>
+                        <option value="Technical">Technical</option>
+                      </select>
+                    </label>
+                  </span>
+                  <span>
+                    <button type="button" name="button" value="submitted">Submit</button>
+                  </span>
+                </div>
+              </div>
             </span>
             <span>
               <a id="idpSession" href="#sessionOnIdp">Session on IDP</a>
