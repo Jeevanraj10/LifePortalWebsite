@@ -232,16 +232,12 @@ hr {
   text-decoration: none;
   border-right: 1px solid #d8d6d6;
 }
-#tabs li a.active{
-  color: white;
-  background-color: #007CC8;
-}
 #tabs li a img.dashboard-icon1{
   display: none;
 }
-#tabs li a:hover{
-  color: white;
-  background-color: #007CC8;
+.tabsBackground{
+  color:#fff!important;
+  background-color:#007CC8!important
 }
 .tabsContainerDivision{
   height: 350px;

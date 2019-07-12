@@ -119,7 +119,7 @@
         <div id="tabs">
           <ul>
             <li>
-              <a onclick="toggleVisibility('myTrainingDivision');" href="#myTraining" class="active">
+              <a class="tabsBackground tablink" onclick="toggleVisibility(event,'myTrainingDivision');" href="#myTraining" id="default">
                 <span>
                   <img class="dashboard-icon" src="Images/my-training.png"></img>
                   <img class="dashboard-icon1" src="Images/my-training1.png"></img>
@@ -127,56 +127,56 @@
               </a>
             </li>
             <li>
-              <a onclick="toggleVisibility('requestedTrainingDivision');" href="#requestedTraining">
+              <a class="tablink" onclick="toggleVisibility(event,'requestedTrainingDivision');" href="#requestedTraining">
                 <span>
                   <img class="dashboard-icon" src="Images/requested-training.png"></img>
                   <img class="dashboard-icon1" src="Images/requested-training1.png"></img>
                 </span>Requested Trainings</a>
             </li>
             <li>
-              <a onclick="toggleVisibility('trainingCatalogDivision');" href="#trainingCatalog">
+              <a class="tablink" onclick="toggleVisibility(event,'trainingCatalogDivision');" href="#trainingCatalog">
                 <span>
                   <img class="dashboard-icon" src="Images/training-catalog.png"></img>
                   <img class="dashboard-icon1" src="Images/training-catalog1.png"></img>
                 </span>Training Catalogue</a>
             </li>
             <li>
-              <a onclick="toggleVisibility('myLearningPlansDivision');" href="#myLearningPlans">
+              <a class="tablink" onclick="toggleVisibility(event,'myLearningPlansDivision');" href="#myLearningPlans">
                 <span>
                   <img class="dashboard-icon" src="Images/learningplan.png"></img>
                   <img class="dashboard-icon1" src="Images/learningplan1.png"></img>
                 </span>My Learning Plans</a>
             </li>
             <li>
-              <a onclick="toggleVisibility('atlDivision');" href="#atl">
+              <a class="tablink" onclick="toggleVisibility(event,'atlDivision');" href="#atl">
                 <span>
                   <img class="dashboard-icon" src="Images/training-catalog.png"></img>
                   <img class="dashboard-icon1" src="Images/training-catalog1.png"></img>
                 </span>ATL</a>
             </li>
             <li>
-              <a onclick="toggleVisibility('idpDivision');" href="#idp">
+              <a class="tablink" onclick="toggleVisibility(event,'idpDivision');" href="#idp">
                 <span>
                   <img class="dashboard-icon" src="Images/IDPN.png"></img>
                   <img class="dashboard-icon1" src="Images/IDPN_hover.png"></img>
                 </span>IDP</a>
             </li>
             <li>
-              <a onclick="toggleVisibility('myCompletionsDivision');" href="#myCompletions">
+              <a class="tablink" onclick="toggleVisibility(event,'myCompletionsDivision');" href="#myCompletions">
                 <span>
                   <img class="dashboard-icon" src="Images/learningplan.png"></img>
                   <img class="dashboard-icon1" src="Images/learningplan1.png"></img>
                 </span>My Completions</a>
             </li>
             <li>
-              <a onclick="toggleVisibility('myOnlineTestsDivision');" href="#onlineTests">
+              <a class="tablink" onclick="toggleVisibility(event,'myOnlineTestsDivision');" href="#onlineTests">
                 <span>
                   <img class="dashboard-icon" src="Images/learningplan.png"></img>
                   <img class="dashboard-icon1" src="Images/learningplan1.png"></img>
                 </span>My Online Tests</a>
             </li>
             <li>
-              <a onclick="toggleVisibility('moocCoursesDivision');" href="#moocCourses">
+              <a class="tablink" onclick="toggleVisibility(event,'moocCoursesDivision');" href="#moocCourses">
                 <span>
                   <img class="dashboard-icon" src="Images/training-catalog.png"></img>
                   <img class="dashboard-icon1" src="Images/training-catalog1.png"></img>
@@ -186,7 +186,7 @@
         </div>
         <!-- divisions for TABS starts here -->
         <div class="tabsContainerDivision">
-          <div id="myTrainingDivision" style="display: block;">
+          <div class="tabContentDivision" id="myTrainingDivision" style="display: block;">
             <table id="myTrainingDivisionTable" cellspacing="0" cellpadding="0">
               <th>Training</th>
               <th>Proficiency Level</th>
@@ -242,10 +242,10 @@
             </a>
           </div>
 
-          <div id="requestedTrainingDivision">
+          <div class="tabContentDivision" id="requestedTrainingDivision">
             <p>No Nominated Courses</p>
           </div>
-          <div id="trainingCatalogDivision">
+          <div class="tabContentDivision" id="trainingCatalogDivision">
             <select>
               <option value="">Mode of Learning</option>
               <option value="">Trainings</option>
@@ -254,7 +254,7 @@
               <option value="">Social Learning</option>
             </select>
           </div>
-          <div id="myLearningPlansDivision">
+          <div class="tabContentDivision" id="myLearningPlansDivision">
             <h5>JANUARY - MARCH</h5>
             <br>
             <p>Present Quarter Plans Not Available</p>
@@ -271,7 +271,7 @@
             <br>
             <p>Present Quarter Plans Not Available</p>
           </div>
-          <div id="atlDivision">
+          <div class="tabContentDivision" id="atlDivision">
             <p>Before launching the course, please ensure</p>
             <ol>
               <li>Disable the Pop-up blocker.</li>
@@ -279,7 +279,7 @@
               <li>Some courses will pop up a blue window in addition to course window, do not close this blue window while accessing the course.</li>
             </ol>
           </div>
-          <div id="idpDivision">
+          <div class="tabContentDivision" id="idpDivision">
             <span>
               <label id="idpDivisionLabel-1">Type
                 <select>
@@ -302,7 +302,7 @@
             <span>
               <a id="createNew" href="#newAction" onclick="createNewActionPlan()">Create New Action Plan</a>
               <div id="mainModal" class="animate">
-                <div class="modal-content">
+                <div id="modalContent" class="modal-content">
                   <span>
                     <p id="text1">
                       <b>New Action Plan</b>
@@ -341,7 +341,7 @@
               <dialog id="myDialog">This is a dialog window</dialog>
             </span>
           </div>
-          <div id="myCompletionsDivision">
+          <div class="tabContentDivision" id="myCompletionsDivision">
             <table id="myCompletionDivisionTable" cellspacing="0" cellpadding="0">
               <th>Training Program</th>
               <th>Skills</th>
@@ -361,10 +361,10 @@
               </tr>
             </table>
           </div>
-          <div id="myOnlineTestsDivision">
+          <div class="tabContentDivision" id="myOnlineTestsDivision">
             <p>No Online Tests are available to display</p>
           </div>
-          <div id="moocCoursesDivision">
+          <div class="tabContentDivision" id="moocCoursesDivision">
             <p>I am Mooc Courses</p>
           </div>
         </div>

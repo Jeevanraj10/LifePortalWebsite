@@ -29,31 +29,18 @@ function createNewActionPlan() {
 function closeForm() {
   document.getElementById("mainModal").style.display = "none";
 }
-
-// tabs container functionality.
-var divs = ["myTrainingDivision", "requestedTrainingDivision", "trainingCatalogDivision",
-"myLearningPlansDivision","atlDivision","idpDivision",
-"myCompletionsDivision","myOnlineTestsDivision","moocCoursesDivision"];
-var visibleDivId = null;
-function toggleVisibility(divId) {
-  if (visibleDivId === divId) {
-    //visibleDivId = null;
-  } else {
-    visibleDivId = divId;
-  }
-  hideNonVisibleDivs();
-}
-function hideNonVisibleDivs() {
+function toggleVisibility(evt, divID) {
   var i
-  var divId
-  var div;
-  for (i = 0; i < divs.length; i++) {
-    divId = divs[i];
-    div = document.getElementById(divId);
-    if (visibleDivId === divId) {
-      div.style.display = "block";
-    } else {
-      div.style.display = "none";
-    }
+  var x
+  var tablinks;
+  x = document.getElementsByClassName("tabContentDivision");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
   }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace("tabsBackground", "");
+  }
+  document.getElementById(divID).style.display = "block";
+  evt.currentTarget.className += " tabsBackground";
 }
