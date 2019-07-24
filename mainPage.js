@@ -24,22 +24,26 @@ function closeForm() {
   document.getElementById("Dragitem").style.display = "none";
 }
 // tabs functionality
-function toggleVisibility(evt, divID) {
+function toggleVisibility(evt, divID,whtIcn,gryIcn) {
   var i
   var x
   var tablinks;
 
   x = document.getElementsByClassName("tabContentDivision");
   tablinks = document.getElementsByClassName("tablink");
-  var image1 = document.getElementsByClassName("dashboard-icon");
-  var image2 = document.getElementsByClassName("dashboard-icon1");
+  greyIcon = document.getElementsByClassName("dashboard-icon");
+  whiteIcon = document.getElementsByClassName("dashboard-icon1");
+
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
     tablinks[i].className = tablinks[i].className.replace("tabsBackground", "");
+    greyIcon[i].style.display="inline-block"
+    whiteIcon[i].style.display="none"
   }
   document.getElementById(divID).style.display = "block";
-  document.getElementById("demo").innerHTML = evt;
   evt.currentTarget.className += " tabsBackground";
+  document.getElementById(whtIcn).style.display = "inline-block";
+  document.getElementById(gryIcn).style.display = "none";
 }
 // draggable content
 var container = document.querySelector("#main");

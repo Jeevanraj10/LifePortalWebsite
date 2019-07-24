@@ -230,16 +230,6 @@ hr {
 #tabs li a img.dashboard-icon1{
   display: none;
 }
-#tabs li a:hover{
-  color:#fff!important;
-  background-color:#007CC8!important
-}
-#tabs li a:hover .dashboard-icon1 {
-  display: inline-block;
-}
-#tabs li a:hover .dashboard-icon {
-  display: none;
-}
 .tabsBackground{
   color:#fff!important;
   background-color:#007CC8!important
