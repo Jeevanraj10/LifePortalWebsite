@@ -105,7 +105,7 @@
       <!-- top Layout ends -->
 
       <!-- Main Body -->
-      <div id="container-1" onclick="Close()">
+      <div id="container-1">
         <a id="text-dashboard" href="#Dashboard">Dashboard</a>
         <p id="announ">
           <b>Announcement</b>
@@ -121,8 +121,8 @@
             <li>
               <a class="tabsBackground tablink" onclick="toggleVisibility(event,'myTrainingDivision');" href="#myTraining" id="default">
                 <span>
-                  <img class="dashboard-icon" src="Images/my-training.png"></img>
-                  <img class="dashboard-icon1" src="Images/my-training1.png"></img>
+                  <img class="dashboard-icon" src="Images/my-training.png" style="display:none;"></img>
+                  <img class="dashboard-icon1" src="Images/my-training1.png" style="display:inline-block;"></img>
                 </span>My Trainings
               </a>
             </li>
@@ -301,29 +301,28 @@
             </span>
             <span>
               <a id="createNew" href="#newAction" onclick="createNewActionPlan()">Create New Action Plan</a>
-              <div id="mainModal" class="animate">
-                <div id="modalContent" class="modal-content">
-                  <span>
-                    <p id="text1">
-                      <b>New Action Plan</b>
-                      <a href="#" onclick="closeForm()">&times</a>
-                    </p>
-                  </span>
-                  <span>
-                    <p id="text2"><img src="Images/req.gif">Select either Behavioral or Technical.</p>
-                  </span>
-                  <span>
-                    <label style="margin-left:10px;">Category
-                      <select>
-                        <option value="Behavioral">Behavioral</option>
-                        <option value="Technical">Technical</option>
-                      </select>
-                    </label>
-                  </span>
-                  <span>
-                    <button type="button" name="button" value="submitted">Submit</button>
-                  </span>
-                </div>
+              <div id="Dragitem" class="Dragitem animate">
+                <span>
+                  <p id="text1">
+                    <b>New Action Plan</b>
+                    <a id="clsBtn" href="#" onclick="closeForm()">&times</a>
+                  </p>
+                </span>
+                <span>
+                  <p id="text2"><img src="Images/req.gif">Select either Behavioral or Technical.</p>
+                </span>
+                <span>
+                  <label id="filterBtn" style="margin-left:10px;">Category
+                    <select>
+                      <option value="Behavioral">Behavioral</option>
+                      <option value="Technical">Technical</option>
+                    </select>
+                  </label>
+                </span>
+                <br>
+                <span>
+                  <button id="submitBtn" type="button" name="button" value="submitted">Submit</button>
+                </span>
               </div>
             </span>
             <span>
@@ -336,9 +335,6 @@
               <a onclick="dialogueBox()" id="viewmore" href="#">View more
                 <img src="Images/viewmoreicon.png" alt="view more">
               </a>
-            </span>
-            <span>
-              <dialog id="myDialog">This is a dialog window</dialog>
             </span>
           </div>
           <div class="tabContentDivision" id="myCompletionsDivision">
@@ -372,6 +368,8 @@
       </div>
       <!-- Main Body Ends -->
     </div>
+    <p id="demo">
+      SOMETHING</p>
     <script src="mainPage.js"></script>
   </body>
 </html>

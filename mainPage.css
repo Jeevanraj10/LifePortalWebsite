@@ -3,7 +3,9 @@
   padding: 0px;
 }
 body{
-  background-color: #d8d6d6
+  background: #d8d6d6;
+  /* font-family: "Lato", sans-serif; */
+  /* transition: background-color .5s; */
 }
 #topLayout  {
   background-color:white;
@@ -33,9 +35,10 @@ body{
   display: none;
   width: 20%;
   height: 90%;
+  z-index: 1;
   background: #3d464d;
-  overflow: hidden;
-  position: absolute;
+  overflow-x: hidden;
+  position: fixed;
 }
 #sidebar h3{
   color: white;
@@ -68,9 +71,6 @@ hr {
   border: 0;
   border-top: 1px solid black;
   margin: 1.5em 0; padding: 0;
-}
-.naviconSpan:hover #sidebar{
-  /* display: block; */
 }
 #topLayout #userImage{
   float: right;
@@ -118,11 +118,8 @@ hr {
 #dropdownmenu li a:hover {
   background-color: #007CC8;
 }
-.dropdownSpan:hover #dropdownmenu{
-  /* display: block; */
-}
 #container-1{
-  /* margin-left: 20% */
+  transition: margin-left .3s;
 }
 #container-1 #text-dashboard{
   font-family: monospace;
@@ -149,6 +146,8 @@ hr {
 }
 .textSrolling {
   height: 30px;
+  margin-left: 28px;
+  margin-right: 95px;
   overflow: hidden;
   position: relative;
 }
@@ -169,11 +168,7 @@ hr {
   /* Apply animation to this element */
   -moz-animation: textSrolling 20s linear infinite;
   -webkit-animation: textSrolling 20s linear infinite;
-  animation: textSrolling 20s linear infinite;
-}
-.textSrolling{
-  height: 30px;
-  margin-left: 28px;
+  animation: textSrolling 30s linear infinite;
 }
 /* Move it (define the animation) */
 @-moz-keyframes textSrolling {
@@ -228,11 +223,21 @@ hr {
   display: block;
   color: grey;
   text-align: center;
-  padding: 13px 12px;
+  padding: 10px 12px;
   text-decoration: none;
   border-right: 1px solid #d8d6d6;
 }
 #tabs li a img.dashboard-icon1{
+  display: none;
+}
+#tabs li a:hover{
+  color:#fff!important;
+  background-color:#007CC8!important
+}
+#tabs li a:hover .dashboard-icon1 {
+  display: inline-block;
+}
+#tabs li a:hover .dashboard-icon {
   display: none;
 }
 .tabsBackground{
@@ -240,11 +245,11 @@ hr {
   background-color:#007CC8!important
 }
 .tabsContainerDivision{
-  height: 350px;
   margin-left:25px;
   margin-right:25px;
   padding: 20px 20px;
   background: white;
+  overflow: hidden;
 }
 .tabsContainerDivision div{
   display: none;
@@ -360,33 +365,26 @@ hr {
   font-size: 13px;
   font-family: 'Source Sans Pro',sans-serif;
 }
-#mainModal {
-  display: none;
-  width: 30%;
-  height: 25%;
+.Dragitem{
+  position: fixed;
+  border: 1px solid grey;
+  width: 26em;
+  height: 14em;
+  top: 50%;
+  left: 50%;
+  margin-top: -7em; /*set to a negative number 1/2 of your height*/
+  margin-left: -13em;
   background: #eee;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  border: 1px solid #d6d6d6;
 }
-.modal-content #text1 {
+.Dragitem #text1 {
   background: white;
   padding: 12px;
   font-size: 14px;
   border-bottom: 1px solid #d6d6d6;
   font-family: monospace;
+  cursor: move;
 }
-.modal-content #text2 {
-  color: #b94a48;
-  font-size: 14px;
-  padding: 10px;
-  font-family: 'Source Sans Pro',sans-serif;
-}
-.modal-content a {
+.Dragitem #clsBtn {
   float: right;
   width: 20px;
   height: 20px;
@@ -397,19 +395,27 @@ hr {
   background: blue;
   border-radius: 4px;
 }
-.modal-content select {
-  padding: 6px;
+.Dragitem #text2 {
+  margin-top: 10px;
+  color: #b94a48;
+  font-size: 14px;
+  padding: 10px;
+  font-family: 'Source Sans Pro',sans-serif;
+}
+#filterBtn {
+  padding: 8px 10px;
   border-radius: 5px;
   color: #666;
 }
-.modal-content button {
+#submitBtn{
   width: 80px;
   height: 40px;
   color: white;
   background: #00559E;
+  margin-top: 10px;
   margin-left: 180px;
-}
-.modal-content button:hover {
+  }
+.Dragitem button:hover {
   opacity: 0.8;
 }
 /* Add Zoom Animation */
