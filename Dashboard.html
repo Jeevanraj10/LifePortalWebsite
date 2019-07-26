@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard</title>
+    <link rel="icon" type="image/ico" href="D:\LIFEPORTAL\Images\favicon.ico" />
+    <link rel="stylesheet" href="Dashboard.css">
+</head>
+
+<body>
+    <div id="main">
+        <!-- top Layout -->
+        <div id="topLayout">
+            <span class="naviconSpan">
+        <a href="#dashBoardIcon"><img id="navIcon" onclick="Sidebar()" title="Show/Hide Navigation"
+            src="Images/Dashboard_Icon.png" alt="dashBoardIcon"></a>
+        <!-- Side Bar -->
+        <div id="sidebar">
+          <ul>
+            <li>
+              <h3>
+                <strong>Quick Links</strong>
+              </h3>
+            </li>
+            <li>
+              <a href="#course_requests">
+                <span>
+                  <img src="Images/manage_trainers.png"></img>
+                </span>course requests</a>
+            </li>
+            <li>
+                <a href="#My_Trainings">
+                    <span>
+                  <img src="Images/Manage_learningheads.png"></img>
+                </span>My Trainings</a>
+            </li>
+            <li>
+                <a href="#My_Calender">
+                    <span>
+                  <img src="Images/Manage_business_head.png"></img>
+                </span>My Calender</a>
+            </li>
+            <li>
+                <a href="#e-Library">
+                    <span>
+                  <img src="Images/skill-repository.png"></img>
+                </span>e-Library</a>
+            </li>
+            <li>
+                <a href="#Site_blogs">
+                    <span>
+                  <img src="Images/training-request.png"></img>
+                </span>Site blogs</a>
+            </li>
+            <li>
+                <a href="#Discussion_Board">
+                    <span>
+                  <img src="Images/learning-paln.png"></img>
+                </span>Discussion Board</a>
+            </li>
+            <li>
+                <a href="#ATL_Courses">
+                    <span>
+                  <img src="Images/learning-paln.png"></img>
+                </span>ATL Courses</a>
+            </li>
+            </ul>
+            <hr>
+            <h3>Reports</h3>
+            <a id="manageReports" href="#manageReports">Manage reports</a>
+            <hr>
+        </div>
+        <!-- Side Bar Ends -->
+        </span>
+        <span>
+        <a target="_blank" href="https://life.ltts.com/LnT/my/"><img id="LNTLogo" src="Images/logo.png"
+            alt="l&tLogo"></a>
+      </span>
+        <span>
+        <img src="Images/lifePortal.png" id="lifePortalImage" alt="lifeportalImage">
+      </span>
+        <span>
+        <a href="#userImage">
+          <img src="Images/userImage.png" id="userImage" alt="userImage"></img>
+        </a>
+      </span>
+        <!-- dropdown menu -->
+        <span class="dropdownSpan">
+        <a href="#dropdown" onclick="dropDown()">Jeevan SR</a>
+        <div id="dropdownmenu">
+          <ul>
+            <li>
+              <a href="#logout">Logout</a>
+            </li>
+            <li>
+              <a href="#help">Help</a>
+            </li>
+            <li>
+              <a href="#viewprofile">View profile</a>
+            </li>
+            <li>
+              <a href="#editprofile">Edit profile</a>
+            </li>
+          </ul>
+        </div>
+      </span>
+        <!-- dropdown menu ends -->
+    </div>
+    <!-- top Layout ends -->
+
+    <!-- Main Body -->
+    <div id="container-1">
+        <a id="text-dashboard" href="#Dashboard">Dashboard</a>
+        <p id="announ">
+            <b>Announcement</b>
+        </p>
+        <div class="textSrolling">
+            <p>Please write to support.lms@lnttechservices.com for any queries/issues in LIFE portal
+            </p>
+        </div>
+        <h4 id="text">Jeevan S R
+        </h4>
+        <div id="tabs">
+            <ul>
+                <li>
+                    <a id="tab1" class="tabsBackground tablink" onclick="toggleVisibility(event,'myTrainingDivision','001','01');" href="#myTraining">
+                        <span>
+                <img id="01" class="dashboard-icon" src="Images/my-training.png" style="display:none;"></img>
+                <img id="001" class="dashboard-icon1" src="Images/my-training1.png" style="display:inline-block;"></img>
+              </span>My Trainings
+                    </a>
+                </li>
+                <li>
+                    <a id="tab2" class="tablink" onclick="toggleVisibility(event,'requestedTrainingDivision','002','02');" href="#requestedTraining">
+                        <span>
+                <img id="02" class="dashboard-icon" src="Images/requested-training.png"></img>
+                <img id="002" class="dashboard-icon1" src="Images/requested-training1.png"></img>
+              </span>Requested Trainings</a>
+                </li>
+                <li>
+                    <a id="tab3" class="tablink" onclick="toggleVisibility(event,'trainingCatalogDivision','003','03');" href="#trainingCatalog">
+                        <span>
+                <img id="03" class="dashboard-icon" src="Images/training-catalog.png"></img>
+                <img id="003" class="dashboard-icon1" src="Images/training-catalog1.png"></img>
+              </span>Training Catalogue</a>
+                </li>
+                <li>
+                    <a id="tab4" class="tablink" onclick="toggleVisibility(event,'myLearningPlansDivision','004','04');" href="#myLearningPlans">
+                        <span>
+                <img id="04" class="dashboard-icon" src="Images/learningplan.png"></img>
+                <img id="004" class="dashboard-icon1" src="Images/learningplan1.png"></img>
+              </span>My Learning Plans</a>
+                </li>
+                <li>
+                    <a id="tab5" class="tablink" onclick="toggleVisibility(event,'atlDivision','005','05');" href="#atl">
+                        <span>
+                <img id="05" class="dashboard-icon" src="Images/training-catalog.png"></img>
+                <img id="005" class="dashboard-icon1" src="Images/training-catalog1.png"></img>
+              </span>ATL</a>
+                </li>
+                <li>
+                    <a id="tab6" class="tablink" onclick="toggleVisibility(event,'idpDivision','006','06');" href="#idp">
+                        <span>
+                <img id="06" class="dashboard-icon" src="Images/IDPN.png"></img>
+                <img id="006" class="dashboard-icon1" src="Images/IDPN_hover.png"></img>
+              </span>IDP</a>
+                </li>
+                <li>
+                    <a id="tab7" class="tablink" onclick="toggleVisibility(event,'myCompletionsDivision','007','07');" href="#myCompletions">
+                        <span>
+                <img id="07" class="dashboard-icon" src="Images/learningplan.png"></img>
+                <img id="007" class="dashboard-icon1" src="Images/learningplan1.png"></img>
+              </span>My Completions</a>
+                </li>
+                <li>
+                    <a id="tab8" class="tablink" onclick="toggleVisibility(event,'myOnlineTestsDivision','008','08');" href="#onlineTests">
+                        <span>
+                <img id="08" class="dashboard-icon" src="Images/learningplan.png"></img>
+                <img id="008" class="dashboard-icon1" src="Images/learningplan1.png"></img>
+              </span>My Online Tests</a>
+                </li>
+                <li>
+                    <a id="tab9" class="tablink" onclick="toggleVisibility(event,'moocCoursesDivision','009','09');" href="#moocCourses">
+                        <span>
+                <img id="09" class="dashboard-icon" src="Images/training-catalog.png"></img>
+                <img id="009" class="dashboard-icon1" src="Images/training-catalog1.png"></img>
+              </span>MOOC Courses</a>
+                </li>
+            </ul>
+        </div>
+        <!-- divisions for TABS starts here -->
+        <div class="tabsContainerDivision">
+            <div class="tabContentDivision" id="myTrainingDivision" style="display: block;">
+                <table id="myTrainingDivisionTable" cellspacing="0" cellpadding="0">
+                    <th>Training</th>
+                    <th>Proficiency Level</th>
+                    <th>Skill</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Catagory</th>
+                    <th>Type</th>
+                    <th>Status</th>
+                    <th>View</th>
+                    <tr>
+                        <td>QMS Induction (Mechanical) – Practitioner</td>
+                        <td>Practitioner</td>
+                        <td>Project Management Processes</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>Process/Methodology</td>
+                        <td>Certification Course</td>
+                        <td>-</td>
+                        <td>
+                            <a href="#">Launch</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>QMS Induction (Embedded) – Practitioner</td>
+                        <td>Practitioner</td>
+                        <td>Project Management Processes</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>Process/Methodology</td>
+                        <td>Certification Course</td>
+                        <td>-</td>
+                        <td>
+                            <a href="#">Launch</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Information Security Management System</td>
+                        <td>Awareness</td>
+                        <td>Information Security Management</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>Process/Methodology</td>
+                        <td>Certification Course</td>
+                        <td>-</td>
+                        <td>
+                            <a href="#">Launch</a>
+                        </td>
+                    </tr>
+                </table>
+                <a id="viewmore" href="D:\LIFEPORTAL\viewmoreHTML.html" target="_blank">View more
+            <img src="Images/viewmoreicon.png" alt="view more">
+          </a>
+            </div>
+
+            <div class="tabContentDivision" id="requestedTrainingDivision">
+                <p>No Nominated Courses</p>
+            </div>
+            <div class="tabContentDivision" id="trainingCatalogDivision">
+                <select>
+            <option value="">Mode of Learning</option>
+            <option value="">Trainings</option>
+            <option value="">Class Room</option>
+            <option value="">eLearning</option>
+            <option value="">Social Learning</option>
+          </select>
+            </div>
+            <div class="tabContentDivision" id="myLearningPlansDivision">
+                <h5>JANUARY - MARCH</h5>
+                <br>
+                <p>Present Quarter Plans Not Available</p>
+                <br>
+                <h5>APRIL - JUNE</h5>
+                <br>
+                <p>Present Quarter Plans Not Available</p>
+                <br>
+                <h5>JULY - SEPTEMBER</h5>
+                <br>
+                <p>Present Quarter Plans Not Available</p>
+                <br>
+                <h5>OCTOBER - DECEMBER</h5>
+                <br>
+                <p>Present Quarter Plans Not Available</p>
+            </div>
+            <div class="tabContentDivision" id="atlDivision">
+                <p>Before launching the course, please ensure</p>
+                <ol>
+                    <li>Disable the Pop-up blocker.</li>
+                    <li>Clear your cookies and caches.</li>
+                    <li>Some courses will pop up a blue window in addition to course window, do not close this blue window while accessing the course.</li>
+                </ol>
+            </div>
+            <div class="tabContentDivision" id="idpDivision">
+                <span>
+            <label id="idpDivisionLabel-1">Type
+              <select>
+                <option value="CHOOSE">Choose</option>
+                <option value="idp">IDP</option>
+              </select>
+            </label>
+          </span>
+                <span>
+            <label id="idpDivisionLabel-2">Year
+              <select>
+                <option value="">FY 19-20</option>
+                <option value="">FY 20-21</option>
+                <option value="">FY 21-22</option>
+                <option value="">FY 22-23</option>
+                <option value="">FY 23-24</option>
+              </select>
+            </label>
+          </span>
+                <span>
+            <a id="createNew" href="#newAction" onclick="createNewActionPlan()">Create New Action Plan</a>
+            <div id="Dragitem" class="Dragitem animate">
+              <span>
+                <p id="text1">
+                  <b>New Action Plan</b>
+                  <a id="clsBtn" href="#" onclick="closeForm()">&times</a>
+                </p>
+              </span>
+                <span>
+                <p id="text2"><img src="Images/req.gif">Select either Behavioral or Technical.</p>
+              </span>
+                <span>
+                <label id="filterBtn" style="margin-left:10px;">Category
+                  <select>
+                    <option value="Behavioral">Behavioral</option>
+                    <option value="Technical">Technical</option>
+                  </select>
+                </label>
+              </span>
+                <br>
+                <span>
+                <button id="submitBtn" type="button" name="button" value="submitted">Submit</button>
+              </span>
+            </div>
+            </span>
+            <span>
+            <a id="idpSession" href="#sessionOnIdp">Session on IDP</a>
+          </span>
+            <span>
+            <p id="records">No Records Found</p>
+          </span>
+            <span>
+            <a onclick="dialogueBox()" id="viewmore" href="#">View more
+              <img src="Images/viewmoreicon.png" alt="view more">
+            </a>
+          </span>
+        </div>
+        <div class="tabContentDivision" id="myCompletionsDivision">
+            <table id="myCompletionDivisionTable" cellspacing="0" cellpadding="0">
+                <th>Training Program</th>
+                <th>Skills</th>
+                <th>Proficiency Level</th>
+                <th>Learning Category</th>
+                <th>Mode of Learning</th>
+                <th>Mandays</th>
+                <th>Completion Month</th>
+                <tr>
+                    <td>QMS</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>Class Room</td>
+                    <td>0.5</td>
+                    <td>Mar-2017</td>
+                </tr>
+            </table>
+        </div>
+        <div class="tabContentDivision" id="myOnlineTestsDivision">
+            <p>No Online Tests are available to display</p>
+        </div>
+        <div class="tabContentDivision" id="moocCoursesDivision">
+            <p>I am Mooc Courses</p>
+        </div>
+    </div>
+    <!-- tabs divisions ends here -->
+    </div>
+    <!-- Main Body Ends -->
+    </div>
+    <script src="Dashboard.js"></script>
+</body>
+
+</html>
